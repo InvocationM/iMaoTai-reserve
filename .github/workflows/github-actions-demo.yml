@@ -1,0 +1,18 @@
+名稱：GitHub Actions 演示
+run-name: ${{ github.actor }} 正在測試 GitHub Actions 🚀
+上：[推]
+工作：
+  探索-GitHub-操作：
+    運行：ubuntu-latest
+    腳步：
+      - run: echo "🎉 該作業是由 ${{ github.event_name }} 事件自動觸發的。"
+      - run: echo "🐧 此作業現在正在 GitHub 託管的 ${{ runner.os }} 伺服器上執行！"
+      - run: echo "🔎 您的分支名稱是 ${{ github.ref }}，您的儲存庫是 ${{ github.repository }}。"
+      - name: 查看儲存庫程式碼
+        使用：actions/checkout@v4
+      - run: echo "💡 ${{ github.repository }} 儲存庫已複製到執行器。"
+      - run: echo "🖥️ 工作流程現在已準備好在運行器上測試您的程式碼。"
+      - name：列出儲存庫中的文件
+        運行：|
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
